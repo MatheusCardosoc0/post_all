@@ -29,7 +29,7 @@ const Button = () => {
     <>
       {!isSession && (
         <button
-          className="text-4xl font-bold bg-green-500 text-white rounded-xl p-2"
+          className="rounded-xl bg-green-500 p-2 text-4xl font-bold text-white hover:bg-green-700"
           onClick={() => sigInUser()}
         >
           Google
@@ -37,7 +37,7 @@ const Button = () => {
       )}
       {isSession && (
         <button
-          className="text-4xl font-bold bg-green-500 text-white rounded-xl p-2"
+          className="rounded-xl bg-green-500 p-2 text-4xl font-bold text-white hover:bg-green-700"
           onClick={() => router.push('/dashboard')}
         >
           Entrar
