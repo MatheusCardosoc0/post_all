@@ -22,7 +22,7 @@ const Button = () => {
   function sigInUser() {
     signIn('google')
 
-    router.push('/dashboard')
+    router.push('/post/dashboard')
   }
 
   return (
@@ -38,7 +38,7 @@ const Button = () => {
       {isSession && (
         <button
           className="rounded-xl bg-green-500 p-2 text-4xl font-bold text-white hover:bg-green-700"
-          onClick={() => router.push('/dashboard')}
+          onClick={() => router.push('/post/dashboard')}
         >
           Entrar
         </button>

@@ -6,6 +6,7 @@ import { zodResolver } from '@hookform/resolvers/zod'
 import Input from './Input'
 import { api } from '@/lib/api'
 import { userState } from '@/context/userState'
+import { useRouter } from 'next/navigation'
 
 const schema = z.object({
   title: z.string(),
@@ -21,18 +22,20 @@ const CreatePostForm = () => {
     resolver: zodResolver(schema),
   })
 
+  const router = useRouter()
+
   const { user } = userState()
 
   async function onFormSubmit(data: FormProps) {
     try {
-      const response = await api.post('/posts', {
+      await api.post('/posts', {
         title: data.title,
         content: data.content,
         imageUrl: '',
         email: user.email,
       })
 
-      console.log(response.data)
+      router.push('/post/dashboard')
     } catch (error) {
       console.log(error)
     }
