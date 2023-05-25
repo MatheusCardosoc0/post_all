@@ -42,12 +42,19 @@ const CreatePostForm = () => {
   }
 
   return (
-    <form onSubmit={handleSubmit(onFormSubmit)}>
+    <form
+      onSubmit={handleSubmit(onFormSubmit)}
+      className="flex w-[90%] max-w-[500px] flex-col gap-6 rounded-xl bg-neutral-100 p-4 drop-shadow-[1px_1px_3px_black]"
+    >
+      <h3 className="text-3xl font-bold text-black">Faça uma publicação</h3>
+
       <Input id="title" register={register} label="title" type="text" />
 
       <Input id="content" register={register} label="content" type="text" />
 
-      <button>Publicar</button>
+      <button className="w-[240px] rounded-xl bg-blue-500 p-4 text-2xl font-bold text-white drop-shadow-[1px_1px_1px_black] hover:bg-blue-700">
+        Publicar
+      </button>
     </form>
   )
 }

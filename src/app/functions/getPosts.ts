@@ -1,7 +1,7 @@
 import { UserProps } from '@/@types/user'
 import { api } from '@/lib/api'
 
-type postProps = {
+export type postProps = {
   id: string
   title: string
   content: string

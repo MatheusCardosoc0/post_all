@@ -7,6 +7,7 @@ const Navbar = () => {
       className="
         fixed
         top-0
+        z-20
         flex
         w-full
         justify-between

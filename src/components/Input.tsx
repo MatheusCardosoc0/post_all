@@ -64,11 +64,11 @@ const Input: React.FC<InputProps> = ({
             peer
             w-full
             rounded-lg
-            bg-black
+            bg-neutral-300
             px-2
             pb-2
             pt-8
-            text-white
+            text-black
             outline-none
           "
         />
@@ -83,7 +83,7 @@ const Input: React.FC<InputProps> = ({
             -translate-y-1/2
             cursor-text
             font-bold
-            text-neutral-200
+            text-neutral-700
             transition
             duration-150
             peer-placeholder-shown:translate-y-12
@@ -107,13 +107,13 @@ const Input: React.FC<InputProps> = ({
               right-2
               top-2
               text-4xl
-              text-white
+              text-black
             "
           >
             {typeInput === 'password' ? (
               <EyeOff />
             ) : (
-              <Eye className="text-white" />
+              <Eye className="text-black" />
             )}
           </span>
         )}
