@@ -19,9 +19,11 @@ export default function DashboardPage() {
 
   return (
     <div className="flex h-full w-full flex-col items-center gap-8 pb-20 ">
-      {posts?.map((post) => (
-        <PostCard key={post.id} post={post} />
-      ))}
+      {posts ? (
+        posts?.map((post) => <PostCard key={post.id} post={post} />)
+      ) : (
+        <p className="text-2xl font-bold">Carregando...</p>
+      )}
     </div>
   )
 }
