@@ -5,7 +5,7 @@ export async function GET(request: NextRequest) {
 
   return NextResponse.redirect(redirectURL, {
     headers: {
-      'Set-Cookie': `next-auth.session-token=; Path=/; max-age=0;`,
+      'Set-Cookie': `__Secure-next-auth.session-token=; Path=/; max-age=0;`,
     },
   })
 }
