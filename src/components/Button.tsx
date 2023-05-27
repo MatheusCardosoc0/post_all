@@ -32,7 +32,7 @@ const Button = () => {
           className="rounded-xl bg-green-500 p-2 text-4xl font-bold text-white hover:bg-green-700"
           onClick={() => sigInUser()}
         >
-          Google
+          Entrar com o google
         </button>
       )}
       {isSession && (
